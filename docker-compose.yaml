@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  dbt_psql:
+    image: postgres:15
+    container_name: dbt_psql
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    networks:
+      - dbt_networks
+
+networks:
+  dbt_networks:
+    driver: bridge
+    name: dbt_networks
+
