@@ -1,0 +1,27 @@
+
+brazillian_ecom:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      # host: "{{ env_var('POSTGRES_HOST') }}"
+      host: "localhost"
+      port: 5432
+      # user: "{{ env_var('POSTGRES_USER') }}"
+      user: "admin"
+      # pass: "{{ env_var('POSTGRES_PASSWORD') }}"
+      pass: "admin123"
+      dbname: brazillian_ecommerce
+      schema: analytics
+
+    prod:
+      type: postgres
+      threads: [1 or more]
+      host: [host]
+      port: [port]
+      user: [prod_username]
+      pass: [prod_password]
+      dbname: [dbname]
+      schema: [prod_schema]
+
+  target: dev
