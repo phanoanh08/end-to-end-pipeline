@@ -1,0 +1,2 @@
+SELECT *
+FROM brazillian_ecommerce.public.olist_order_items_dataset
