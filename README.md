@@ -1,5 +1,3 @@
-# end-to-end-pipeline
-
 ## Requirements
 Build a PostgreSQL container that stores data as a warehouse. 
 
